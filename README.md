@@ -16,11 +16,13 @@ npm run json:server
 and visit `http://localhost:3000/pets` or `http://localhost:3000/companies` to see the JSON.
 
 
+
 To run the GraphQL server, run 
 ```bash
 npm run dev
 ```
 and visit `http://localhost:4000/graphql` to use the GraphiQL application.
+
 
 Enjoy!
 ![image](https://user-images.githubusercontent.com/25447342/45267495-b7cb9a00-b42a-11e8-892a-c6219719eeb1.png)
