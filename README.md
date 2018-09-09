@@ -17,7 +17,7 @@ and visit `http://localhost:3000/pets` or `http://localhost:3000/companies` to s
 
 
 
-To run the GraphQL server, run 
+To run the GraphQL server, run:
 ```bash
 npm run dev
 ```
