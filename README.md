@@ -1,6 +1,6 @@
 # GraphQL Pets 
 
-GraphQL Pets is built to accompany this [Intro to GraphQL Lesson](http://backend.turing.io/module4/lessons/intro-to-graphql). The master branch has a starter boilerplate in Express/GraphQL and is hitting a JSON DB to avoid having to worry about database setup. The compelted branch shows working versions of queries and mutations. 
+GraphQL Pets is built to accompany this [Intro to GraphQL Lesson](http://backend.turing.io/module4/lessons/intro-to-graphql). The `master` branch has a starter boilerplate in Express/GraphQL and is hitting a JSON DB to avoid having to worry about database setup. The `completed` branch shows working versions of queries and mutations. 
 
 To get running on your machine, run the following commands in your terminal:
 
