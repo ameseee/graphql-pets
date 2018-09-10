@@ -1,12 +1,13 @@
 const graphql = require('graphql');
+const axios = require('axios');
+
 const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLNonNull
 } = graphql;
 
-const PetType = require('./pet_type');
-const CompanyType = require('./company_type');
+const { PetType, CompanyType } = require('./types');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',

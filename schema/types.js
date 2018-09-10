@@ -1,11 +1,28 @@
 const graphql = require('graphql');
+const axios = require('axios');
+
 const {
   GraphQLObjectType,
   GraphQLString,
-  GraphQLList
+  GraphQLList,
+  GraphQLInt
 } = graphql;
 
-const PetType = require('./pet_type');
+const PetType = new GraphQLObjectType({
+  name: 'Pet',
+  fields: () => ({
+    id: { type: GraphQLString },
+    firstName: { type: GraphQLString },
+    age: { type: GraphQLInt },
+    company: {
+      type: CompanyType,
+      resolve(parentValue, args) {
+        return axios.get(`http://localhost:3000/companies/${parentValue.companyId}`)
+          .then(response => response.data);
+      }
+     }
+  })
+});
 
 const CompanyType = new GraphQLObjectType({
   name: 'Company',
@@ -23,4 +40,4 @@ const CompanyType = new GraphQLObjectType({
   })
 });
 
-module.exports = CompanyType;
+module.exports = { PetType, CompanyType };
