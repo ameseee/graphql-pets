@@ -1,20 +1,11 @@
 const graphql = require('graphql');
 const axios = require('axios');
 
-const {
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLInt,
-  GraphQLSchema,
-  GraphQLList,
-  GraphQLNonNull
-} = graphql;
-
-
-// types
-// root query
-// mutations
+const { GraphQLSchema } = graphql;
+const RootQueryType = require('./root_query_type');
+const mutation = require('./mutations');
 
 module.exports = new GraphQLSchema({
-  //export root query and mutations
+  query: RootQueryType,
+  mutation
 });
