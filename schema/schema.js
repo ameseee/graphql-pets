@@ -88,7 +88,7 @@ const mutation = new GraphQLObjectType({
     deletePet: {
       type: PetType,
       args: {
-        id: {type: new GraphQLNonNull(GraphQLString) }
+        id: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parentValue, { id }) {
         return axios.delete(`http://localhost:3000/pets/${id}`)
