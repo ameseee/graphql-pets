@@ -80,8 +80,8 @@ const mutation = new GraphQLObjectType({
         age: { type: new GraphQLNonNull(GraphQLInt) },
         companyId: { type: GraphQLString }
       },
-      resolve(parentValue, { firstName, age }) {
-        return axios.post(`http://localhost:3000/pets`, { firstName, age })
+      resolve(parentValue, { firstName, age, companyId }) {
+        return axios.post(`http://localhost:3000/pets`, { firstName, age, companyId })
           .then(response => response.data);
       }
     },
@@ -112,5 +112,6 @@ const mutation = new GraphQLObjectType({
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation
 });
