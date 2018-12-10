@@ -17,6 +17,8 @@ and visit `http://localhost:3000/pets` or `http://localhost:3000/companies` to s
 
 
 
+For the following set of instructions, you need to have `nodemon` installed globally. If you don't have it, run `npm i -g nodemon`. If you aren't sure, go ahead with the following steps and you will see an error regarding `nodemon` if you don't have it. 
+
 To run the GraphQL server, run:
 ```bash
 npm run dev
